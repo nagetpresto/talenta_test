@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aplikasi Teman</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-4">
+    <h2>Input Teman</h2>
+    <form id="friend-form">
+      <div class="form-group">
+        <label for="name">Nama:</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Jenis Kelamin:</label>
+        <select class="form-control" id="gender" required>
+          <option value="L">Laki-laki</option>
+          <option value="P">Perempuan</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="age">Usia:</label>
+        <input type="number" class="form-control" id="age" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Tambah</button>
+    </form>
+    <hr>
+    <h2>Daftar Teman</h2>
+    <table id="friend-table" class="table">
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>Jenis Kelamin</th>
+          <th>Usia</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button id="download-btn" class="btn btn-success mt-4">Download Laporan</button>
+    <div id="chart-container" class="row mt-4">
+      <div class="col-md-6">
+        <canvas id="gender-chart"></canvas>
+      </div>
+      <div class="col-md-6">
+        <canvas id="age-chart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
